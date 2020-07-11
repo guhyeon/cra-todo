@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodoListItem = ({id, onCompleteChange, onDeleteClick, text})=>{
+const TodoListItem = ({id, onCompleteChange, onDeleteClick, text, isComplete})=>{
     const handleCompleteChange = (event)=>{
         console.log("handleCompleteChange -> id, event",id , event)
         onCompleteChange(id, event.target.checked);
@@ -13,7 +13,7 @@ const TodoListItem = ({id, onCompleteChange, onDeleteClick, text})=>{
 
     return(
         <div>
-            <input type ="checkbox" onChange={handleCompleteChange}></input><span>{text}</span><button onClick={handleDeleteClick}>X</button>
+            <input type ="checkbox" checked={isComplete} onChange={handleCompleteChange}></input><span>{text}</span><button onClick={handleDeleteClick}>X</button>
         </div>
     )
 }
