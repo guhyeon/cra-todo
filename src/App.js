@@ -36,18 +36,16 @@ function App() {
       // TODO 리스트에서 해당 아이템 제거
   }
 
+  const handlePlusClick = (value)=>{
+    // console.log("InputPlusClick from TodoItemInput" + value)
+    // TODO 리스트에 아이템 추가
+    console.log(`InputPlusClick from TodoItemInput ${value}`)
+  }
+
   return (
     <div className="App">
         <TodoItemInput 
-          onPlusClick={
-          (value)=>{
-            // console.log("InputPlusClick from TodoItemInput" + value)
-            console.log(`InputPlusClick from TodoItemInput ${value}`)
-          }
-        }></TodoItemInput>
-        {
-          // TodoList에서는 어떤 아이템이 완료됐는지, 제거해야하는지를 뱉어주는 이벤트를 속성으로 갖는다.
-        }
+          onPlusClick={handlePlusClick} />
         <TodoList 
           list={list}
           onDeleteClick = {handleDeleteClick}
