@@ -37,9 +37,16 @@ function App() {
   }
 
   const handlePlusClick = (value)=>{
-    // console.log("InputPlusClick from TodoItemInput" + value)
-    // TODO 리스트에 아이템 추가
     console.log(`InputPlusClick from TodoItemInput ${value}`)
+    setList(oldList=>{
+      let id = oldList.length+1;
+      return(
+      [
+        ...oldList,
+        {id:id, text:value,isComplete:false }//newItem
+      ]
+      )
+    })
   }
 
   return (
