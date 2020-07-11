@@ -2,25 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import test from './images/test.jpeg'
+import TodoItemInput from './Components/TodoItemInput';
 
+// 숙제. 아래 onPlusClick을 함수로 따로 빼서 만들어줘
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          튜토리얼 테스트
-        </p>
-        <img src={test}></img>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <TodoItemInput onPlusClick={
+          (value)=>{
+            // console.log("InputPlusClick from TodoItemInput" + value)
+            console.log(`InputPlusClick from TodoItemInput ${value}`)
+          }
+        } ></TodoItemInput>
     </div>
   );
 }
