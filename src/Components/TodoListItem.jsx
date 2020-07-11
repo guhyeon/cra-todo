@@ -2,10 +2,12 @@ import React from 'react'
 
 const TodoListItem = ({id, onCompleteChange, onDeleteClick, text})=>{
     const handleCompleteChange = (event)=>{
+        console.log("handleCompleteChange -> id, event",id , event)
         onCompleteChange(id, event.target.checked);
     }
 
     const handleDeleteClick = ()=>{
+        console.log("handleDeleteClick -> id", id)
         onDeleteClick(id);
     }
 
