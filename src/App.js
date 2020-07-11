@@ -18,10 +18,10 @@ function App() {
         }
         <TodoList 
           onDeleteClick = {(item)=>{
-            console.log("App -> item", item)
+            console.log("App -> onDeleteClick", item)
           }}
-          onCompleteClick = {(item)=>{
-            console.log("App -> item", item)
+          onCompleteChange = {(item)=>{
+            console.log("App -> onCompleteChange", item)
           }}/>
     </div>
   );
