@@ -33,7 +33,12 @@ function App() {
 
   const handleDeleteClick = (itemId)=>{
       console.log("handleDeleteClick -> itemId", itemId)
-      // TODO 리스트에서 해당 아이템 제거
+      // 리스트에서 해당 아이템 제거
+      setList(oldList=>
+        (
+          oldList.filter(item=>item.id!==itemId)
+        )  
+      )
   }
 
   const handlePlusClick = (value)=>{
