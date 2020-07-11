@@ -27,7 +27,17 @@ function App() {
 
   const handleCompleteChange = (itemId, isComplete)=>{
       console.log("handleCompleteChange -> itemId, isComplete", itemId, isComplete)
-      // TODO 리스트에서 아이템 아이디에 맞는 항목의 완료값을 변경
+      // 리스트에서 아이템 아이디에 맞는 항목의 완료값을 변경
+      setList(oldList=>{
+        const newList = oldList.map(item=>{
+          if(item.id===itemId)
+          {
+            return {...item, isComplete:isComplete}
+          }
+          return item;
+        })
+        return newList;
+      })
       
   }
 
