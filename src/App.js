@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TodoItemInput from './Components/TodoItemInput';
+import TodoList from './Components/TodoList'
 
 // 숙제. 아래 onPlusClick을 함수로 따로 빼서 만들어줘
 function App() {
