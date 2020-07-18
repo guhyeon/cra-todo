@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import TodoItemInput from './Components/TodoItemInput';
 import TodoList from './Components/TodoList';
+import Person from './Components/Person';
 
 // 숙제. 아래 onPlusClick을 함수로 따로 빼서 만들어줘
 function App() {
@@ -61,12 +62,17 @@ function App() {
 
   return (
     <div className="App">
-      <TodoItemInput onPlusClick={handlePlusClick} />
+      <Person name="개똥이1" lifeSpan={40} initialAge={20} />
+      <Person name="개똥이2" lifeSpan={40} initialAge={22} />
+      <Person name="개똥이3" lifeSpan={26} initialAge={23} />
+      <Person name="개똥이4" lifeSpan={80} initialAge={24} />
+
+      {/* <TodoItemInput onPlusClick={handlePlusClick} />
       <TodoList
         list={list}
         onDeleteClick={handleDeleteClick}
         onCompleteChange={handleCompleteChange}
-      />
+      /> */}
     </div>
   );
 }
